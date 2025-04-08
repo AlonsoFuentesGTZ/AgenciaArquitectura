@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "name": "Proyecto 2adad",
+      "description": "Descripción del proyecto 1",
+      "status": "Completado"
+    },
+    {
+      "id": "2",
+      "name": "Proyecto 2",
+      "description": "Descripción del proyecto 2",
+      "status": "Completado"
+    }
+  ]
+}

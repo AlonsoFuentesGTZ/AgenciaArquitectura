@@ -1,0 +1,44 @@
+/* styles/ProjectList.css */
+
+.project-list-container {
+  margin-left: 30px; /* Ajusta este valor según lo que necesites */
+  margin-top: 30px; /* Ajusta este valor según lo que necesites */
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-top: 44430px; /* Ajusta este valor según lo que necesites */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  padding: 1rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.card h3 {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.card .status {
+  font-size: 0.875rem;
+  color: #777;
+}

@@ -1,0 +1,57 @@
+/* styles/Home.css */
+
+.container {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('../assets/fondohome.jpg'); /* Cambia la ruta según tu estructura */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 0;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Sombreado oscuro */
+    z-index: 1;
+}
+
+.container > * {
+    position: relative;
+    z-index: 2;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #fff;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}

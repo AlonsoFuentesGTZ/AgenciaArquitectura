@@ -1,0 +1,46 @@
+/* index.css – estilos globales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+button {
+  text-transform: none;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+input[type="file"] {
+  margin-top: 16px;
+  display: block;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+  background: white;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}

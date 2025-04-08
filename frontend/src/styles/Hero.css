@@ -1,0 +1,60 @@
+/* styles/Hero.css */
+.hero {
+    position: relative;
+    text-align: center;
+    background-image: url('../assets/fondohome.jpg'); /* Ajusta la ruta */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Sombra oscura sobre la imagen */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons button {
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-buttons .primary {
+    background-color: #4caf50;
+    color: white;
+}
+
+.hero-buttons .primary:hover {
+    background-color: #45a049;
+}
+
+.hero-buttons .secondary {
+    background-color: #333;
+    color: white;
+}
+
+.hero-buttons .secondary:hover {
+    background-color: #555;
+}
