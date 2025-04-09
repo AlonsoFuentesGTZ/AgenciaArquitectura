@@ -9,6 +9,7 @@ import './styles/App.css';
 import ContactForm from "./components/ContactForm";
 import Dashboard from "./pages/Dashboard";
 import Servicios from './pages/Servicios'; // Asegúrate de importar Servicios.js
+import Portafolio from './pages/Portafolio';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/editar-proyecto/:id" element={<ProjectForm />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/servicios" element={<Servicios />} /> {/* Agrega la ruta de Servicios */}
+                <Route path="/portafolio" element={<Portafolio />} /> {/* Agrega la ruta de Portafolio */}
             </Routes>
         </Router>
     );

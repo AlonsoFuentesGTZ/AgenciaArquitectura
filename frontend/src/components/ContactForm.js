@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { TextField, Button, Container, Typography, Snackbar, Alert } from '@mui/material';
 import { sendContactMessage } from '../services/api'; // Importar la función para enviar el mensaje de contacto
+import Footer from './Footer'; // Importa el Footer
+import '../styles/ContactForm.css'; // Asegúrate de tener estilos para el formulario y el footer
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -45,65 +47,75 @@ const ContactForm = () => {
   };
 
   return (
-    <Container maxWidth="sm">
-      <Typography variant="h4" gutterBottom align="center">
-        Contáctanos
-      </Typography>
-      <form onSubmit={handleSubmit}>
-        <TextField
-          label="Nombre"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          fullWidth
-          required
-          variant="outlined"
-          margin="normal"
-        />
-        <TextField
-          label="Correo Electrónico"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          fullWidth
-          required
-          variant="outlined"
-          margin="normal"
-          type="email"
-        />
-        <TextField
-          label="Mensaje"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          fullWidth
-          required
-          variant="outlined"
-          margin="normal"
-          multiline
-          rows={4}
-        />
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          fullWidth
-        >
-          Enviar
-        </Button>
-      </form>
+    <div className="contact-form-page">
+      <Container maxWidth="sm" className="contact-form-container">
+        <Typography variant="h4" gutterBottom align="center">
+          Contáctanos
+        </Typography>
+        <div className="contact-form">
+          <form onSubmit={handleSubmit}>
+            <div className="form-field">
+              <TextField
+                label="Nombre"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                fullWidth
+                required
+                variant="outlined"
+                margin="normal"
+              />
+            </div>
+            <div className="form-field">
+              <TextField
+                label="Correo Electrónico"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                fullWidth
+                required
+                variant="outlined"
+                margin="normal"
+                type="email"
+              />
+            </div>
+            <div className="form-field">
+              <TextField
+                label="Mensaje"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                fullWidth
+                required
+                variant="outlined"
+                margin="normal"
+                multiline
+                rows={4}
+              />
+            </div>
+            <div className="form-button">
+              <Button type="submit" variant="contained" color="primary" fullWidth>
+                Enviar
+              </Button>
+            </div>
+          </form>
 
-      {/* Snackbar de confirmación */}
-      <Snackbar
-        open={snackbar.open}
-        autoHideDuration={6000}
-        onClose={handleCloseSnackbar}
-      >
-        <Alert onClose={handleCloseSnackbar} severity={snackbar.severity} sx={{ width: '100%' }}>
-          {snackbar.message}
-        </Alert>
-      </Snackbar>
-    </Container>
+          {/* Snackbar de confirmación */}
+          <Snackbar
+            open={snackbar.open}
+            autoHideDuration={6000}
+            onClose={handleCloseSnackbar}
+            className="snackbar"
+          >
+            <Alert onClose={handleCloseSnackbar} severity={snackbar.severity} sx={{ width: '100%' }}>
+              {snackbar.message}
+            </Alert>
+          </Snackbar>
+        </div>
+      </Container>
+
+      <Footer /> {/* Footer directamente, sin envolver en .footer-container */}
+    </div>
   );
 };
 

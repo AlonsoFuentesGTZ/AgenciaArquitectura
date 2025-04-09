@@ -1,17 +1,31 @@
-/* styles/Footer.css */
+/* Footer.css */
+
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #333;  /* Fondo oscuro */
+    color: white;  /* Color de texto blanco */
+    padding: 20px 0;
     text-align: center;
-    padding: 2rem 0;
-}
-
-footer .footer-links a {
-    color: white;
-    margin: 0 10px;
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    margin-top: 30px; /* Espacio entre el contenido y el footer */
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .footer-links {
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: #fff;
     text-decoration: none;
-}
-
-footer .footer-links a:hover {
-    color: #4caf50;
-}
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  .footer-links a:hover {
+    color: #f39c12;  /* Color amarillo al pasar el mouse */
+  }
+  

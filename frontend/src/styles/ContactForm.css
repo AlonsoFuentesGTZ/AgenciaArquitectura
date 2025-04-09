@@ -1,49 +1,31 @@
-/* styles/ContactForm.css */
-form {
-    background-color: #f9f9f9;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+/* Footer.css */
 
-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-form .MuiTextField-root {
-    margin-bottom: 1rem;
-}
-
-.MuiButton-root {
-    background-color: #4caf50;  /* Color de fondo verde */
-    color: white;               /* Color del texto del botón */
-    font-size: 16px;            /* Tamaño de la fuente */
-    padding: 12px 24px;         /* Espaciado interno del botón */
-    border-radius: 5px;         /* Bordes redondeados */
-    width: 100%;                /* Asegura que el botón ocupe todo el ancho disponible */
-    text-transform: none;       /* Evita que el texto se transforme a mayúsculas */
-    margin-top: 20px;           /* Agrega espacio por encima del botón */
-}
-
-/* Efecto hover para el botón */
-.MuiButton-root:hover {
-    background-color: #388e3c;  /* Color más oscuro cuando se pasa el ratón sobre el botón */
-}
-
-form .MuiButton-root {
-    margin-top: 1rem;
-}
-
-.MuiTypography-h4 {
-    color: #333;
-    font-weight: bold;
-}
-
-.MuiSnackbar-root {
-    bottom: 20px;
-}
+footer {
+    background-color: #333;  /* Fondo oscuro */
+    color: white;  /* Color de texto blanco */
+    padding: 20px 0;
+    text-align: center;
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    margin-top: 30px; /* Espacio entre el contenido y el footer */
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .footer-links {
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  .footer-links a:hover {
+    color: #f39c12;  /* Color amarillo al pasar el mouse */
+  }
+  
