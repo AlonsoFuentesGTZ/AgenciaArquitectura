@@ -13,7 +13,7 @@ import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/AgenciaArquitectura">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,9 +22,9 @@ function App() {
         <Route path="/nuevo-proyecto" element={<ProjectForm />} />
         <Route path="/editar-proyecto/:id" element={<ProjectForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/servicios" element={<Servicios />} />{" "}
-        <Route path="/portafolio" element={<Portafolio />} />{" "}
-        <Route path="/proyecto/:id" element={<ProjectDetails />} />{" "}
+        <Route path="/servicios" element={<Servicios />} />
+        <Route path="/portafolio" element={<Portafolio />} />
+        <Route path="/proyecto/:id" element={<ProjectDetails />} />
       </Routes>
     </Router>
   );

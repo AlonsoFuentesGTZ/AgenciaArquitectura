@@ -12,7 +12,12 @@ const ProjectDetails = () => {
   return (
     <div className="project-details-container">
       <h2>{project.name}</h2>
-      <img src={project.mainImage} alt={project.name} className="main-image" />
+      {/* Imagen principal con ruta correcta */}
+      <img
+        src={process.env.PUBLIC_URL + "/" + project.mainImage}
+        alt={project.name}
+        className="main-image"
+      />
 
       <p className="project-description">{project.description}</p>
       <p><strong>Estado:</strong> {project.status}</p>
@@ -21,7 +26,12 @@ const ProjectDetails = () => {
         <div key={section.id} className="project-section">
           <h3>{section.title}</h3>
           <div className="section-content">
-            <img src={section.imageUrl} alt={section.title} className="section-image" />
+            {/* Imagen de sección con ruta correcta */}
+            <img
+              src={process.env.PUBLIC_URL + "/" + section.imageUrl}
+              alt={section.title}
+              className="section-image"
+            />
             <p>{section.text}</p>
           </div>
         </div>
