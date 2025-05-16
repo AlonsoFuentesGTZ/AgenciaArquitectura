@@ -12,26 +12,15 @@ const ProjectDetails = () => {
   return (
     <div className="project-details-container">
       <h2>{project.name}</h2>
-      {/* Imagen principal con ruta correcta */}
-      <img
-        src={process.env.PUBLIC_URL + "/" + project.mainImage}
-        alt={project.name}
-        className="main-image"
-      />
-
-      <p className="project-description">{project.description}</p>
+      <img src={project.mainImage} alt={project.name} className="main-image" />
+      <p>{project.description}</p>
       <p><strong>Estado:</strong> {project.status}</p>
 
       {project.sections.map(section => (
         <div key={section.id} className="project-section">
           <h3>{section.title}</h3>
           <div className="section-content">
-            {/* Imagen de sección con ruta correcta */}
-            <img
-              src={process.env.PUBLIC_URL + "/" + section.imageUrl}
-              alt={section.title}
-              className="section-image"
-            />
+            <img src={section.imageUrl} alt={section.title} className="section-image" />
             <p>{section.text}</p>
           </div>
         </div>
