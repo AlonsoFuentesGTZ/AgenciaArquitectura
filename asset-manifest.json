@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/AgenciaArquitectura/static/css/main.c06d6b64.css",
+    "main.js": "/AgenciaArquitectura/static/js/main.256b1cf6.js",
+    "static/js/453.301ef6ba.chunk.js": "/AgenciaArquitectura/static/js/453.301ef6ba.chunk.js",
+    "static/media/fondooficial.jpg": "/AgenciaArquitectura/static/media/fondooficial.54711aa7c179ab174fe0.jpg",
+    "index.html": "/AgenciaArquitectura/index.html",
+    "main.c06d6b64.css.map": "/AgenciaArquitectura/static/css/main.c06d6b64.css.map",
+    "main.256b1cf6.js.map": "/AgenciaArquitectura/static/js/main.256b1cf6.js.map",
+    "453.301ef6ba.chunk.js.map": "/AgenciaArquitectura/static/js/453.301ef6ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c06d6b64.css",
+    "static/js/main.256b1cf6.js"
+  ]
+}
