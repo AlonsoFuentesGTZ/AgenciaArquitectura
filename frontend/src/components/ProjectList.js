@@ -8,9 +8,9 @@ const ProjectList = () => {
     <div className="project-list-container">
       {projects.map(project => (
         <div key={project.id} className="project-card">
-          {/* Asegúrate de usar mainImage */}
+          {/* Usar process.env.PUBLIC_URL para cargar imagen */}
           <img 
-            src={project.mainImage} 
+            src={process.env.PUBLIC_URL + "/" + project.mainImage} 
             alt={project.name} 
             className="main-image"
           />
