@@ -1,20 +1,30 @@
-// src/components/Navbar.js
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/navbar.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/navbar.css"; // Asegúrate de que los estilos estén correctos
 
 const Navbar = () => {
   return (
-      <header>
-        <div className="logo">
-          <h2>Agencia Arquitectura</h2>
-        </div>
-        <nav>
+    <nav className="navbar">
+      {/* Logo a la izquierda, redirige al inicio */}
+      <div className="navbar-logo">
+        <Link to="/">
+          <img src="/assets/logoClusia.png" alt="Logo" className="logo" />
+        </Link>
+      </div>
+
+      {/* Enlaces a la derecha */}
+      <ul className="navbar-links">
+        <li>
           <Link to="/">Inicio</Link>
-          <Link to="/servicios">Servicios</Link>
+        </li>
+        <li>
+          <Link to="/portafolio">Portafolio</Link>
+        </li>
+        <li>
           <Link to="/contacto">Contacto</Link>
-        </nav>
-      </header>
+        </li>
+      </ul>
+    </nav>
   );
 };
 

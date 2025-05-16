@@ -1,59 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import { Card, CardContent, Typography, Grid, CircularProgress } from '@mui/material';
-import { getProjects } from '../services/api'; // Importa la función que crea la solicitud GET
+import React from 'react';
+import { Link } from 'react-router-dom';
+import projects from '../data/projects';  // Asegúrate de importar los datos
+import '../styles/ProjectList.css';       // Asegúrate de que el CSS esté correcto
 
 const ProjectList = () => {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    // Obtener proyectos desde el backend
-    getProjects()
-      .then((data) => {
-        setProjects(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError('Error al cargar los proyectos');
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) {
-    return <CircularProgress sx={{ margin: '20px auto', display: 'block' }} />;
-  }
-
-  if (error) {
-    return <Typography color="error">{error}</Typography>;
-  }
-
   return (
-    <Grid container spacing={3}>
-      {projects.map((project) => (
-        <Grid item key={project.id} xs={12} sm={6} md={4}>
-          <Card>
-            {project.imageUrl && (
-              <img
-                src={`http://localhost:3001${project.imageUrl}`}
-                alt={project.name}
-                height="200"
-                style={{ objectFit: 'cover', width: '100%' }}
-              />
-            )}
-            <CardContent>
-              <Typography variant="h6">{project.name}</Typography>
-              <Typography variant="body2" color="text.secondary">
-                {project.description}
-              </Typography>
-              <Typography variant="caption" display="block" sx={{ mt: 1 }}>
-                Estado: {project.status}
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+    <div className="project-list-container">
+      {projects.map(project => (
+        <div key={project.id} className="project-card">
+          {/* Asegúrate de usar mainImage */}
+          <img 
+            src={project.mainImage} 
+            alt={project.name} 
+            className="main-image"
+          />
+          <div className="project-info">
+            <h3>{project.name}</h3>
+            <p>{project.description}</p>
+            <p><strong>Estado:</strong> {project.status}</p>
+            <Link to={`/proyecto/${project.id}`} className="ver-mas-button">
+              Ver más
+            </Link>
+          </div>
+        </div>
       ))}
-    </Grid>
+    </div>
   );
 };
 

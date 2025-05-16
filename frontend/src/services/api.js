@@ -41,4 +41,15 @@ export const sendContactMessage = async (contact) => {
   }
 };
 
+// Función para obtener los detalles de un proyecto específico
+export const getProjectDetails = async (id) => {
+  try {
+    const response = await api.get(`/api/proyectos/${id}`);  // Usar api en lugar de axios directamente
+    return response.data;  // Retorna los datos del proyecto
+  } catch (error) {
+    console.error("Error al obtener los detalles del proyecto", error);
+    throw error;
+  }
+}
+
 export default api;

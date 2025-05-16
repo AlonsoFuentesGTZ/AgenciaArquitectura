@@ -2,7 +2,7 @@
 .hero {
     position: relative;
     text-align: center;
-    background-image: url('../assets/fondohome.jpg'); /* Ajusta la ruta */
+    background-image: url('../assets/fondooficial.jpg'); /* Ajusta la ruta */
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -42,12 +42,12 @@
 }
 
 .hero-buttons .primary {
-    background-color: #4caf50;
+    background-color: #94733e;
     color: white;
 }
 
 .hero-buttons .primary:hover {
-    background-color: #45a049;
+    background-color: #94733e;
 }
 
 .hero-buttons .secondary {
