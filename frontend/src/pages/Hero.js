@@ -9,7 +9,7 @@ const Hero = () => {
                 <h1>Bienvenidos a la Agencia de Arquitectura</h1>
                 <p>Transformamos tus ideas en realidad. Descubre lo que podemos hacer por ti.</p>
                 <div className="hero-buttons">
-                    <Link to="/portafolio">
+                    <Link to="/Proyectos">
                         <button className="primary">Ver Proyectos</button>
                     </Link>
                     <Link to="/contacto">

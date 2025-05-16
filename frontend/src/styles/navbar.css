@@ -1,42 +1,47 @@
-/* Estilo para el Navbar */
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Evita el desplazamiento horizontal */
-  }
-
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    z-index: 1000;
-    padding: 10px 0;
-    transition: top 0.3s ease; /* Para suavizar la animación */
-  }
-  
-  
-  .navbar-links {
-    display: flex;
-    justify-content: flex-end; /* Alinea los enlaces a la derecha */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-links li {
-    margin: 0 20px;
-  }
-  
-  .navbar-links a {
-    color: rgba(255, 255, 255, 0.775);
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .navbar-links a:hover {
-    color: #dbad62;  /* Cambio de color al pasar el mouse */
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; /* Aumentamos la altura del navbar para que el logo se vea mejor */
+  background-color: #333; /* Fondo sólido */
+  display: flex;
+  justify-content: space-between; /* Alinea el logo a la izquierda y los enlaces a la derecha */
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000; /* Asegura que el navbar quede por encima de otros elementos */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo {
+  flex: 1;
+}
+
+.logo {
+  height: 70px; /* Aumentamos el tamaño del logo */
+  width: auto;  /* Mantiene la proporción del logo */
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: white; /* Color blanco */
+  text-decoration: none;
+  font-weight: 600; /* Peso de la fuente */
+  font-size: 20px; /* Tamaño de la fuente */
+  text-transform: uppercase; /* Mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover */
+.navbar-links li a:hover {
+  color: #94733e; /* Color dorado */
+  transform: scale(1.1); /* Aumento del tamaño al pasar el ratón */
+}
