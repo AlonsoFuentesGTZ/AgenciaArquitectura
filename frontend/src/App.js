@@ -20,7 +20,6 @@ function App() {
         <Route path="/proyectos" element={<ProjectList />} />
         <Route path="/contacto" element={<ContactPage />} />
         <Route path="/nuevo-proyecto" element={<ProjectForm />} />
-        <Route path="/editar-proyecto/:id" element={<ProjectForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/portafolio" element={<Portafolio />} />
