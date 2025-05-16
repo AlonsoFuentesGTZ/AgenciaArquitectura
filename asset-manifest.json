@@ -1,16 +1,24 @@
 {
   "files": {
-    "main.css": "/AgenciaArquitectura/static/css/main.c06d6b64.css",
-    "main.js": "/AgenciaArquitectura/static/js/main.256b1cf6.js",
+    "main.css": "/AgenciaArquitectura/static/css/main.4eaeaf51.css",
+    "main.js": "/AgenciaArquitectura/static/js/main.231a2967.js",
     "static/js/453.301ef6ba.chunk.js": "/AgenciaArquitectura/static/js/453.301ef6ba.chunk.js",
     "static/media/fondooficial.jpg": "/AgenciaArquitectura/static/media/fondooficial.54711aa7c179ab174fe0.jpg",
+    "static/media/entrega.jpg": "/AgenciaArquitectura/static/media/entrega.bef127d27b8683bd666c.jpg",
+    "static/media/logoClusia.png": "/AgenciaArquitectura/static/media/logoClusia.541e99c6c8737b2c92f9.png",
+    "static/media/proyecto.jpeg": "/AgenciaArquitectura/static/media/proyecto.41a420ddf30e41b83643.jpeg",
+    "static/media/construccion.png": "/AgenciaArquitectura/static/media/construccion.c1d2125b04fb3bd2fd67.png",
+    "static/media/plano.jpg": "/AgenciaArquitectura/static/media/plano.1b1cab9a4f744ab499f7.jpg",
+    "static/media/proyecto.png": "/AgenciaArquitectura/static/media/proyecto.f003cc39da74f7548e01.png",
+    "static/media/proyecto.jpg": "/AgenciaArquitectura/static/media/proyecto.26a72fdf05fc632ab07a.jpg",
+    "static/media/croquis.jpg": "/AgenciaArquitectura/static/media/croquis.8c6ae1bf6994b9e93571.jpg",
     "index.html": "/AgenciaArquitectura/index.html",
-    "main.c06d6b64.css.map": "/AgenciaArquitectura/static/css/main.c06d6b64.css.map",
-    "main.256b1cf6.js.map": "/AgenciaArquitectura/static/js/main.256b1cf6.js.map",
+    "main.4eaeaf51.css.map": "/AgenciaArquitectura/static/css/main.4eaeaf51.css.map",
+    "main.231a2967.js.map": "/AgenciaArquitectura/static/js/main.231a2967.js.map",
     "453.301ef6ba.chunk.js.map": "/AgenciaArquitectura/static/js/453.301ef6ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c06d6b64.css",
-    "static/js/main.256b1cf6.js"
+    "static/css/main.4eaeaf51.css",
+    "static/js/main.231a2967.js"
   ]
 }
