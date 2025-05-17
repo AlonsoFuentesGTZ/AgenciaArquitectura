@@ -2,8 +2,6 @@
   "name": "agencia-arquitectura",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://AlonsoFuentesGTZ.github.io/AgenciaArquitectura",
-
 
   "dependencies": {
     "@emotion/react": "^11.14.0",

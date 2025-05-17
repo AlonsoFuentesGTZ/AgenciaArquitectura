@@ -7,8 +7,13 @@
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 90px;
-
 }
+
+@media (max-width: 768px) {
+  .project-list-container {
+    padding-top: 130px;
+  }
+} /* Aquí debe cerrarse la llave del media query */
 
 .project-card {
   background-color: #fff;
@@ -72,3 +77,4 @@
 .ver-mas-button:hover {
   background-color: #7e5f3f;
 }
+

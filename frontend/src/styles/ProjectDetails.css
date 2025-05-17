@@ -7,6 +7,12 @@
   color: #222;
 }
 
+@media (max-width: 600px) {
+  .project-detail-container {
+    padding-top: 110px; /* Ajusta según la altura real del navbar en móvil */
+  }
+}
+
 .project-details-container h2 {
   font-weight: 700;
   margin-bottom: 15px;
@@ -31,6 +37,13 @@
 .project-section {
   margin-bottom: 40px;
 }
+
+.project-section:hover {
+  transform: translateY(-8px);
+  transition: transform 0.3s ease;
+  cursor: pointer; /* opcional, para indicar interactividad */
+}
+
 
 .project-section h3 {
   margin-bottom: 10px;

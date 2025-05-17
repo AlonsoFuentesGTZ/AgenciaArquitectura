@@ -6,14 +6,16 @@ import ProjectList from "./components/ProjectList";
 import ProjectForm from "./components/ProjectForm";
 import "./styles/App.css";
 import Dashboard from "./pages/Dashboard";
-import Servicios from "./pages/Servicios"; // Asegúrate de importar Servicios.js
+import Servicios from "./pages/Servicios";
 import Portafolio from "./pages/Portafolio";
-import ProjectDetails from "./components/ProjectDetails"; // Importamos el componente ProjectDetails
+import ProjectDetails from "./components/ProjectDetails";
 import ContactPage from "./pages/ContactPage";
+
+const basename = process.env.PUBLIC_URL || "/";
 
 function App() {
   return (
-    <Router basename="/AgenciaArquitectura">
+    <Router basename={basename}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
