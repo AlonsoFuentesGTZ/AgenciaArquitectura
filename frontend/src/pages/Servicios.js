@@ -1,29 +1,30 @@
 import React from "react";
-import "../styles/Servicios.css"; // Asegúrate de que el CSS esté correcto
+import { useTranslation } from "react-i18next";
+import "../styles/Servicios.css";
 import Footer from "../components/Footer";
 
 const Servicios = () => {
+  const { t } = useTranslation();
+
   return (
     <>
-      <div>
-        <section className="servicios">
-          <h2>Servicios Profesionales</h2>
-          <div className="card-container">
-            <div className="card">
-              <h3>Diseño de Planos</h3>
-              <p>Ofrecemos soluciones arquitectónicas personalizadas.</p>
-            </div>
-            <div className="card">
-              <h3>Consultoría</h3>
-              <p>Asesoría experta en proyectos arquitectónicos.</p>
-            </div>
-            <div className="card">
-              <h3>Renovación</h3>
-              <p>Transforma tu espacio con nuestras ideas innovadoras.</p>
-            </div>
+      <section className="servicios">
+        <h2>{t("services_title")}</h2>
+        <div className="card-container">
+          <div className="card">
+            <h3>{t("services_design")}</h3>
+            <p>{t("services_design_desc")}</p>
           </div>
-        </section>
-      </div>
+          <div className="card">
+            <h3>{t("services_consulting")}</h3>
+            <p>{t("services_consulting_desc")}</p>
+          </div>
+          <div className="card">
+            <h3>{t("services_renovation")}</h3>
+            <p>{t("services_renovation_desc")}</p>
+          </div>
+        </div>
+      </section>
       <Footer />
     </>
   );

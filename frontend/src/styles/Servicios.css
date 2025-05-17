@@ -5,23 +5,39 @@
 }
 
 .card-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2rem;
-    flex-wrap: wrap; /* Permite que las cards bajen de fila */
-    gap: 1.5rem; /* Espacio uniforme entre cards */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-.card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    padding: 2rem;
-    text-align: center;
-    box-sizing: border-box;
-    transition: transform 0.3s ease;
+/* Estilos base de las cards */
+.card-container .card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 2rem;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
+
+/* Efecto al hacer hover */
+.card-container .card:hover {
+  transform: scale(1.08);
+  z-index: 2;
+}
+
+/* Efecto difuminado para el resto cuando una está activa */
+.card-container:hover > .card:not(:hover) {
+  filter: blur(2px);
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
 
 .card:hover {
     transform: translateY(-6px);
@@ -48,6 +64,13 @@
     .card {
         width: 45%; /* Dos cards por fila */
     }
+}
+@media (max-width: 600px) {
+  .card-container:hover > .card:not(:hover) {
+    filter: none;
+    transform: none;
+    opacity: 1;
+  }
 }
 
 /* Media queries para pantallas pequeñas */

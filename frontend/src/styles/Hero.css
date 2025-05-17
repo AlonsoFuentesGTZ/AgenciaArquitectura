@@ -1,63 +1,175 @@
-/* styles/Hero.css */
+/* Fondo con imagen */
 .hero {
-    position: relative;
-    text-align: center;
-    background-image: url('../assets/fondooficial.jpg'); /* Ajusta la ruta */
-    background-size: cover;
-    background-position: center;
-    min-height: 85vh;
-    padding-bottom: 40px; 
-    overflow: visible;
+  position: relative;
+  text-align: center;
+  background-image: url("../assets/fondooficial.jpg"); /* Ajusta ruta si es necesario */
+  background-size: cover;
+  background-position: center;
+  min-height: 85vh;
+  padding-bottom: 40px;
+  overflow: visible;
 }
 
-
+/* Capa oscura */
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Sombra oscura sobre la imagen */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
 }
 
+/* Títulos */
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-.hero-buttons button {
-    padding: 12px 24px;
-    margin: 10px;
+/* Contenedor de botones */
+.hero-buttons {
+  display: flex;
+  flex-direction: row; /* horizontal por defecto */
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* Enlaces que contienen los botones */
+.animated-link {
+  flex: 1 1 220px;
+  max-width: 240px;
+  min-width: 200px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Botón animado */
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  height: 56px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #1c1c16;
+  color: #94733e;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0 0 0 2px #94733e;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* Flechas SVG */
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: #94733e;
+  z-index: 9;
+  transition: all 0.4s ease;
+}
+
+.animated-button .arr-1 {
+  right: 10px;
+}
+
+.animated-button .arr-2 {
+  left: 8px;
+}
+
+/* Círculo de fondo en hover */
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #94733e;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+/* Texto del botón */
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: transform 0.4s ease;
+}
+
+/* Hover */
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 24px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #212121;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+  background-color: #94733e;
+}
+
+/* Click */
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px #94733e;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
     font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
+  }
 
-.hero-buttons .primary {
-    background-color: #94733e;
-    color: white;
-}
-
-.hero-buttons .primary:hover {
-    background-color: #94733e;
-}
-
-.hero-buttons .secondary {
-    background-color: #333;
-    color: white;
-}
-
-.hero-buttons .secondary:hover {
-    background-color: #555;
+  .animated-link {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
