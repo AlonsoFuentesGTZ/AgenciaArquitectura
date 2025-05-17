@@ -3,14 +3,18 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px; /* Aumentamos la altura del navbar para que el logo se vea mejor */
-  background-color: #333; /* Fondo sólido */
+  height: 70px; /* Altura fija */
+  background-color: #333;
   display: flex;
-  justify-content: space-between; /* Alinea el logo a la izquierda y los enlaces a la derecha */
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  z-index: 1000; /* Asegura que el navbar quede por encima de otros elementos */
+  z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-spacer {
+  height: auto; /* igual a la altura del navbar */
 }
 
 .navbar-logo {
@@ -18,8 +22,8 @@
 }
 
 .logo {
-  height: 70px; /* Aumentamos el tamaño del logo */
-  width: auto;  /* Mantiene la proporción del logo */
+  height: 70px;
+  width: auto;
 }
 
 .navbar-links {
@@ -31,17 +35,27 @@
 }
 
 .navbar-links li a {
-  color: white; /* Color blanco */
+  color: white;
   text-decoration: none;
-  font-weight: 600; /* Peso de la fuente */
-  font-size: 20px; /* Tamaño de la fuente */
-  text-transform: uppercase; /* Mayúsculas */
-  letter-spacing: 1px; /* Espaciado entre letras */
-  transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Efecto hover */
 .navbar-links li a:hover {
-  color: #94733e; /* Color dorado */
-  transform: scale(1.1); /* Aumento del tamaño al pasar el ratón */
+  color: #94733e;
+  transform: scale(1.1);
+}
+
+/* Responsividad */
+
+@media (max-width: 600px) {
+  .navbar {
+    height: auto;
+    flex-direction: column;
+    padding: 1px;
+  }
+  
 }

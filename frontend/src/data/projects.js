@@ -53,7 +53,7 @@ const projects = [
         id: "planos",
         title: "Planos Constructivos",
         text: "Planos detallados para la construcción del proyecto.",
-        imageUrl: imagesProyecto2['croquis1.jpg'],
+        imageUrl: imagesProyecto2['croquis.jpg'],
       },
       {
         id: "desarrollo",
@@ -94,12 +94,6 @@ const projects = [
         title: "Desarrollo de la Obra",
         text: "Proceso de construcción y avance de obra con imágenes.",
         imageUrl: imagesProyecto3['construccion.png'],
-      },
-      {
-        id: "entrega",
-        title: "Entrega Final",
-        text: "Entrega final del proyecto al cliente con detalles y celebraciones.",
-        imageUrl: imagesProyecto3['entrega.jpg'],
       },
     ],
   },

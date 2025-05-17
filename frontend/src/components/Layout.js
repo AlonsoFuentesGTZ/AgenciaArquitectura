@@ -1,13 +1,16 @@
 import React from 'react';
-import Navbar from './Navbar';  // Asegúrate de importar el Navbar
-import Footer from './Footer';  // Asegúrate de importar el Footer
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
     <div>
-      <Navbar />  {/* Aquí va el navbar */}
-      <main>{children}</main>  {/* El contenido específico de cada página va aquí */}
-      <Footer />  {/* Aquí va el footer */}
+      <Navbar />
+      {/* Espaciador para compensar altura del navbar fijo */}
+      <div className="navbar-spacer" />
+      
+      <main>{children}</main>
+      <Footer />
     </div>
   );
 };
